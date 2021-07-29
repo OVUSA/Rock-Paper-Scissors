@@ -2,7 +2,6 @@
 <html>
     <head>
         <meta charset="uft-8">
-        <script src = "script.js"></script>
         <link rel ="styleSheet" href = "style.css">
         <title>Rock-paper-scissor Game</title>
     </head>
@@ -17,10 +16,11 @@
             <span id="user-score">0</span>:<span id="comp-score">0</span>
         </div>
         <div class ="result">
-            <p>Paper cover rock.You win!</p>
+            <p id = "operation">Paper cover rock.You win!</p>
         </div>
-        <div class ="choices">
-            <div class = "choice "id ="p">
+
+        <div class ="choices green-glow">
+            <div class = "choice " id ="p">
                 <img src = "images/paper.png" width=90px alt="paper">
             </div>
             <div class = "choice" id ="r">
@@ -30,12 +30,9 @@
                 <img src = "images/scisors.png" width = 90px alt = "scissors">
             </div>
         </div>
-
         <div class ="promp">
             <p> Make your move</p>
-        </div>
-            
-    
-           
+            <script src = "script.js"></script>
+        </div>          
     </body>
 </html>
