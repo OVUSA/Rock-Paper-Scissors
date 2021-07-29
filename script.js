@@ -13,11 +13,7 @@ const computerScore_span = document.getElementById("comp-score");
 const score_board = document.querySelector("score-board");
 const paper_div = document.getElementById("p");
 
-main();
-
-/**
- *  random computer choice
- */
+/** random computer choice */
 function getComputerChoice(){
     const choice = ["paper","rock","scissors"];
     const result = Math.floor(Math.random()*choice.length);
@@ -27,8 +23,14 @@ function getComputerChoice(){
 }
 
 function main(){
-   paper_div.addEventListener('click', function(){makeTurn("paper");})
-   rock_div.addEventListener("click",()=>{makeTurn("rock");})
-   scissors.addEventListener("click",()=>{makeTurn("scissors");})
+   paper_div.addEventListener('click', function(){game("paper");})
+   rock_div.addEventListener("click",()=>{ game("rock");})
+   scissors.addEventListener("click",()=>{ game("scissors");})
 
+}
+
+function game(userChoice){
+    const computerChoice = getComputerChoice();
+    console.log(`User choice :${userChoice}, against :${computerChoice}`);
+    deretmineWiner();
 }
