@@ -8,6 +8,7 @@ const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const score_board = document.querySelector("score-board");
 const paper_div = document.getElementById("p");
+let operation = document.getElementById("operation");
 main();
 
 /** random computer choice */
