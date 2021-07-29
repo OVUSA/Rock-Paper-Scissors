@@ -34,32 +34,23 @@ function game(userChoice){
  * Algorithm to determine the winner of the round
  */
 function deretmineWiner(){
-    if(userChoice ==="paper" && computerChoice ==="scissors"){
-        console.log("Computer win!")
-        computerScore +=1;
-        updateChoice();
-    }else if(userChoice ==="scissors" && computerChoice ==="paper"){
-        console.log("User wins!");
-        userScore+=1;
-        updateChoice();
-    }else if(userChoice ==="scissors" && computerChoice ==="rock"){
-        console.log("Computer wins!");
-        computerScore+=1;
-        updateChoice();
-    }else if(userChoice ==="rock" && computerChoice ==="scissors"){
-        console.log("User wins!");
-        userScore+=1;
-        updateChoice();
-    }else if(userChoice ==="paper" && computerChoice ==="rock"){
-        console.log("User wins!");
-        userScore+=1;
-        updateChoice();
-    }else if(userChoice ==="rock" && computerChoice ==="paper"){
-        console.log("Computer wins!");
-        computerScore+=1;
-        updateChoice();
+
+    switch(userChoice+computerTurnChoice){
+        case "scissorspaper":
+        case "rockscissors":
+        case "paperrock":
+        console.log("USER WINS!!");
+            userScore+=1;
+            updateChoice();
+            break;
+        case "paperscissors":
+        case "scissorsrock":
+        case "rockpaper":
+            console.log("Computer Wins!!");
+            computerScore+=1;
+            updateChoice;
+            break;
     }
-console.log(`Current score is ${userScore} : ${computerScore}`)
 }
 
 function updateChoice(){ 
