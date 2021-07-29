@@ -29,3 +29,40 @@ function game(userChoice){
     console.log(`User choice :${userChoice}, against :${computerChoice}`);
     deretmineWiner();
 }
+
+/**
+ * Algorithm to determine the winner of the round
+ */
+function deretmineWiner(){
+    if(userChoice ==="paper" && computerChoice ==="scissors"){
+        console.log("Computer win!")
+        computerScore +=1;
+        updateChoice();
+    }else if(userChoice ==="scissors" && computerChoice ==="paper"){
+        console.log("User wins!");
+        userScore+=1;
+        updateChoice();
+    }else if(userChoice ==="scissors" && computerChoice ==="rock"){
+        console.log("Computer wins!");
+        computerScore+=1;
+        updateChoice();
+    }else if(userChoice ==="rock" && computerChoice ==="scissors"){
+        console.log("User wins!");
+        userScore+=1;
+        updateChoice();
+    }else if(userChoice ==="paper" && computerChoice ==="rock"){
+        console.log("User wins!");
+        userScore+=1;
+        updateChoice();
+    }else if(userChoice ==="rock" && computerChoice ==="paper"){
+        console.log("Computer wins!");
+        computerScore+=1;
+        updateChoice();
+    }
+console.log(`Current score is ${userScore} : ${computerScore}`)
+}
+
+function updateChoice(){ 
+        userChoice = "0";
+        computerChoice = "0";  
+}
