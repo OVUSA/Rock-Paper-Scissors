@@ -1,7 +1,3 @@
-let userTurn= true;
-let compuertTurn =false;
-
-
 let userChoice ;
 let computerChoice;
 
