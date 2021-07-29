@@ -12,20 +12,23 @@ const userScore_span = document.getElementById("user-score");
 const computerScore_span = document.getElementById("comp-score");
 const score_board = document.querySelector("score-board");
 const paper_div = document.getElementById("p");
+
+main();
+
 /**
- * 
+ *  random computer choice
  */
- paper_div.addEventListener('click', function(){
-    console.log("You choice paper")
-})
+function getComputerChoice(){
+    const choice = ["paper","rock","scissors"];
+    const result = Math.floor(Math.random()*choice.length);
+    console.log(choice[result])
+    computerTurnChoice =choice[result];
+    
+}
 
-let rock_div = document.getElementById("r");
-rock_div.addEventListener("click",()=>{
-    console.log("You choice rock")
-})
+function main(){
+   paper_div.addEventListener('click', function(){makeTurn("paper");})
+   rock_div.addEventListener("click",()=>{makeTurn("rock");})
+   scissors.addEventListener("click",()=>{makeTurn("scissors");})
 
-
-let scissors = document.getElementById("s");
-scissors.addEventListener("click",()=>{
-    console.log("You choose scissors")
-})
+}
