@@ -25,12 +25,29 @@ function main(){
    scissors.addEventListener("click",()=>{ game("scissors");})
 }
 
-function game(userChoice){
-    const computerChoice = getComputerChoice();
-    console.log(`User choice :${userChoice}, against :${computerChoice}`);
+function game(selection){
+    userChoice = selection;
+    computerChoice = getComputerChoice();
+    operation.innerHTML = `You choose: ${selection}, \n
+     Computer choose : ${computerChoice}`;
     deretmineWiner();
 }
 
+function win(){
+    console.log("USER WINS!!");
+    userScore+=1;
+    userScore_span.innerHTML = userScore;
+    updateChoice();
+
+}
+
+function lost(){
+    console.log("Computer Wins!!");
+            computerScore+=1;
+            computerScore_span.innerHTML = computerScore;
+            updateChoice;
+
+}
 /**
  * Algorithm to determine the winner of the round
  */
@@ -40,16 +57,12 @@ function deretmineWiner(){
         case "scissorspaper":
         case "rockscissors":
         case "paperrock":
-        console.log("USER WINS!!");
-            userScore+=1;
-            updateChoice();
+            win();
             break;
         case "paperscissors":
         case "scissorsrock":
         case "rockpaper":
-            console.log("Computer Wins!!");
-            computerScore+=1;
-            updateChoice;
+            lost();
             break;
     }
 }
